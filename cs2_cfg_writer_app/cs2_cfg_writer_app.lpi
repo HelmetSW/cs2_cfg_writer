@@ -11,7 +11,7 @@
       <UseXPManifest Value="True"/>
       <XPManifest>
         <DpiAware Value="True"/>
-        <TextName Value="Free Software"/>
+        <TextName Value="Free Software - CS2ConfigWriterApp"/>
         <TextDesc Value="App for modifying cs2 cfg file."/>
       </XPManifest>
       <Icon Value="0"/>

@@ -2,7 +2,7 @@
 
 ; Define variables:
 
-#define MyDistributionFilesDir "s:\cs2_cfg_writer"
+#define MyDistributionFilesDir "p:\cs2_cfg_writer"
 #define MyInstallFilesDir "install_files"     
 #define MyIniFileName "CS2ConfigWriter.ini"
 #define MyHintsFileName "command_hints.ini"
