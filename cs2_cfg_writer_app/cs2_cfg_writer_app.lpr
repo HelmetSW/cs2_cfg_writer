@@ -22,6 +22,7 @@ uses
   , uNewCfgWizardForm
   , uBindKeyFrame
   , uCfgCommand
+  , uCommandListFrame
   ;
 
 {$R *.res}

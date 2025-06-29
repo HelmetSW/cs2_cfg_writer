@@ -1,0 +1,29 @@
+object FrameCommandList: TFrameCommandList
+  Left = 0
+  Height = 375
+  Top = 0
+  Width = 422
+  ClientHeight = 375
+  ClientWidth = 422
+  TabOrder = 0
+  DesignLeft = 844
+  DesignTop = 328
+  object ListBoxCommands: TListBox
+    Left = 0
+    Height = 333
+    Top = 0
+    Width = 422
+    Align = alClient
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object PanelBottom: TPanel
+    Left = 0
+    Height = 42
+    Top = 333
+    Width = 422
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+  end
+end

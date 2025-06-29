@@ -4,6 +4,8 @@
 
 interface
 
+{$INCLUDE global_directives.inc}
+
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Menus,
   ActnList, ComCtrls, StdCtrls, uCfgWriter, uCfgCommand;
@@ -126,6 +128,10 @@ begin
       + IncludeTrailingPathDelimiter(ApplicationName)
       + SETT_SETTINGS_FILE_NAME
     );
+
+  {$IFNDEF DEBUG}
+  actNewCfgWizard.Enabled := False;
+  {$ENDIF}
 end;
 
 procedure TFormMain.actSaveFileExecute(Sender: TObject);
