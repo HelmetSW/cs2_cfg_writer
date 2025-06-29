@@ -4,6 +4,8 @@ unit uCfgCommand;
 
 interface
 
+{$INCLUDE global_directives.inc}
+
 uses
   Classes, SysUtils, fgl;
 

@@ -16,9 +16,7 @@ type
   TFrameCommandList = class(TFrame)
     actSelect: TAction;
     ListBoxCommands: TListBox;
-    PanelBottom: TPanel;
   private
-    FSelectedCfgCommand: string;
     function GetSelectedCfgCommand: string;
   protected
     procedure FillListBox;
@@ -39,6 +37,11 @@ uses
 
 function TFrameCommandList.GetSelectedCfgCommand: string;
 begin
+  Result := '';
+  if ListBoxCommands.ItemIndex < 0 then
+    Exit;
+  if ListBoxCommands.ItemIndex >= ListBoxCommands.Count then
+    Exit;
   Result := ListBoxCommands.Items[ListBoxCommands.ItemIndex];
 end;
 

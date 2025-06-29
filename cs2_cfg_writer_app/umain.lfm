@@ -1,7 +1,7 @@
 object FormMain: TFormMain
-  Left = 513
+  Left = 729
   Height = 477
-  Top = 227
+  Top = 297
   Width = 562
   Caption = 'CS2 config writer'
   ClientHeight = 457
@@ -3190,8 +3190,8 @@ object FormMain: TFormMain
       end
       object StatusBarMain: TStatusBar
         Left = 0
-        Height = 28
-        Top = 29
+        Height = 23
+        Top = 34
         Width = 562
         Panels = <        
           item

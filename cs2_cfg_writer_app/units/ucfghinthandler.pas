@@ -4,6 +4,8 @@
 
 interface
 
+{$INCLUDE global_directives.inc}
+
 uses
   Classes, SysUtils;
 

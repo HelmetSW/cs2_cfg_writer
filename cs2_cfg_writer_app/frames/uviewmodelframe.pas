@@ -4,6 +4,8 @@
 
 interface
 
+{$INCLUDE global_directives.inc}
+
 uses
   Classes, SysUtils, Forms, Controls, Spin, StdCtrls, uCfgWriter;
 
@@ -102,13 +104,6 @@ procedure TFrameViewmodel.DataToFrame(ACfgFileKeyList: TCfgFileKeyList);
 begin
   if ACfgFileKeyList = nil then
     Exit;
-  {
-  edtFOV.Value := FOV_DEF_VAL;
-  edtViewmodelX.Value := VIEWMODEL_OFFSET_X_DEF_VAL;
-  edtViewmodelY.Value := VIEWMODEL_OFFSET_Y_DEF_VAL;
-  edtViewmodelZ.Value := VIEWMODEL_OFFSET_Z_DEF_VAL;
-  cbViewmodelPresetpos.ItemIndex := VIEWMODEL_PRESETPOS_DEF_VAL;
-  }
   edtFOV.Value := StrToIntDef(GetKeyValue(ACfgFileKeyList, CFG_FOV), FOV_DEF_VAL);
   edtViewmodelX.Value := StrToFloatDef(GetKeyValue(ACfgFileKeyList, CFG_VIEWMODEL_OFFSET_X), VIEWMODEL_OFFSET_X_DEF_VAL);
   edtViewmodelY.Value := StrToFloatDef(GetKeyValue(ACfgFileKeyList, CFG_VIEWMODEL_OFFSET_Y), VIEWMODEL_OFFSET_Y_DEF_VAL);

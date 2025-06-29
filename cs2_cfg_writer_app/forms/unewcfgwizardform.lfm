@@ -1,43 +1,49 @@
 object FormNewCfgWizard: TFormNewCfgWizard
-  Left = 747
-  Height = 441
-  Top = 342
-  Width = 515
+  Left = 636
+  Height = 569
+  Top = 266
+  Width = 635
+  BorderStyle = bsDialog
   Caption = 'Průvodce vytvoření konfiguračního souboru'
-  ClientHeight = 441
-  ClientWidth = 515
+  ClientHeight = 569
+  ClientWidth = 635
   OnShow = FormShow
+  Position = poMainFormCenter
   LCLVersion = '2.2.6.0'
   object PanelViewmodel: TPanel
     Left = 0
     Height = 192
-    Top = 210
-    Width = 515
+    Top = 338
+    Width = 635
     Align = alBottom
     BevelOuter = bvNone
     ClientHeight = 192
-    ClientWidth = 515
+    ClientWidth = 635
     TabOrder = 0
     inline FrmViewmodel: TFrameViewmodel
       Height = 192
-      Width = 515
+      Width = 635
       Align = alClient
       ClientHeight = 192
-      ClientWidth = 515
+      ClientWidth = 635
+      inherited gbViewModel: TGroupBox
+        Width = 384
+        ClientWidth = 380
+      end
     end
   end
   object PanelBottom: TPanel
     Left = 0
     Height = 39
-    Top = 402
-    Width = 515
+    Top = 530
+    Width = 635
     Align = alBottom
     BevelOuter = bvNone
     ClientHeight = 39
-    ClientWidth = 515
+    ClientWidth = 635
     TabOrder = 1
     object btnClose: TButton
-      Left = 427
+      Left = 547
       Height = 25
       Top = 8
       Width = 75
@@ -46,7 +52,7 @@ object FormNewCfgWizard: TFormNewCfgWizard
       TabOrder = 0
     end
     object btnOk: TButton
-      Left = 328
+      Left = 448
       Height = 25
       Top = 8
       Width = 75
@@ -55,30 +61,28 @@ object FormNewCfgWizard: TFormNewCfgWizard
       TabOrder = 1
     end
   end
-  object PanelHeader: TPanel
-    Left = 0
-    Height = 50
-    Top = 0
-    Width = 515
-    Align = alTop
-    BevelOuter = bvNone
-    TabOrder = 2
-  end
   inline FrmBindKey: TFrameBindKey
-    Height = 160
-    Top = 50
-    Width = 515
-    Align = alClient
-    ClientHeight = 160
-    ClientWidth = 515
-    TabOrder = 3
-    inherited ListBoxCommands: TListBox
-      Height = 159
+    Width = 635
+    Align = alTop
+    ClientWidth = 635
+    TabOrder = 2
+    inherited FrmCommandList: TFrameCommandList
+      Height = 306
+      Top = 32
+      Width = 245
+      ClientHeight = 306
+      ClientWidth = 245
+      TabOrder = 3
+      inherited ListBoxCommands: TListBox
+        Height = 306
+        Width = 245
+        Anchors = [akTop, akLeft]
+      end
     end
   end
   object ActsList: TActionList
-    Left = 456
-    Top = 200
+    Left = 552
+    Top = 360
     object actClose: TAction
       Caption = 'Zavřít'
       OnExecute = actCloseExecute

@@ -1,29 +1,20 @@
 object FrameBindKey: TFrameBindKey
   Left = 0
-  Height = 313
+  Height = 341
   Top = 0
-  Width = 613
-  ClientHeight = 313
-  ClientWidth = 613
+  Width = 634
+  ClientHeight = 341
+  ClientWidth = 634
   TabOrder = 0
   DesignLeft = 691
   DesignTop = 378
-  object ListBoxCommands: TListBox
-    Left = 8
-    Height = 273
-    Top = 32
-    Width = 248
-    Anchors = [akTop, akLeft, akBottom]
-    ItemHeight = 0
-    TabOrder = 0
-  end
   object BtnScanKey: TButton
-    Left = 272
+    Left = 264
     Height = 25
-    Top = 80
+    Top = 120
     Width = 102
-    Action = actScanKey
-    TabOrder = 1
+    Action = actSelectKey
+    TabOrder = 0
   end
   object lblCommands: TLabel
     Left = 11
@@ -33,40 +24,53 @@ object FrameBindKey: TFrameBindKey
     Caption = 'Příkazy:'
     ParentColor = False
   end
-  object ListBox1: TListBox
-    Left = 392
-    Height = 273
+  object ListBoxNewBinds: TListBox
+    Left = 384
+    Height = 305
     Top = 32
-    Width = 216
-    Anchors = [akTop, akLeft, akRight, akBottom]
+    Width = 245
     ItemHeight = 0
-    TabOrder = 2
+    TabOrder = 1
   end
   object btnAdd: TButton
-    Left = 272
+    Left = 264
     Height = 25
-    Top = 40
+    Top = 80
     Width = 102
     Action = actAdd
-    TabOrder = 3
+    TabOrder = 2
   end
   object lblUserDefinedBinds: TLabel
-    Left = 400
+    Left = 384
     Height = 15
-    Top = 9
+    Top = 8
     Width = 89
     Caption = 'Vytvořené bindy:'
     ParentColor = False
   end
+  inline FrmCommandList: TFrameCommandList
+    Height = 306
+    Top = 32
+    Width = 245
+    ClientHeight = 306
+    ClientWidth = 245
+    TabOrder = 3
+    inherited ListBoxCommands: TListBox
+      Height = 306
+      Width = 245
+      Anchors = [akTop, akLeft]
+    end
+  end
   object ActsList: TActionList
-    Left = 568
+    Left = 296
     Top = 8
-    object actScanKey: TAction
-      Caption = 'Sejmout klávesu'
-      OnExecute = actScanKeyExecute
+    object actSelectKey: TAction
+      Caption = 'Vybrat klávesu'
+      OnExecute = actSelectKeyExecute
     end
     object actAdd: TAction
       Caption = 'Přidat'
+      OnExecute = actAddExecute
     end
   end
 end

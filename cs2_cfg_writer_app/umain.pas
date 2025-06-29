@@ -131,6 +131,7 @@ begin
 
   {$IFNDEF DEBUG}
   actNewCfgWizard.Enabled := False;
+  actNewCfgWizard.Visible := False;
   {$ENDIF}
 end;
 

@@ -4,8 +4,10 @@ unit uBindKeyFrame;
 
 interface
 
+{$INCLUDE global_directives.inc}
+
 uses
-  uCfgCommand, uCfgWriter,
+  uCommandListFrame,
   Classes, SysUtils, Forms, Controls, StdCtrls, ActnList, ExtCtrls, Dialogs;
 
 type
@@ -14,21 +16,18 @@ type
 
   TFrameBindKey = class(TFrame)
     actAdd: TAction;
-    actScanKey: TAction;
+    actSelectKey: TAction;
     ActsList: TActionList;
     BtnScanKey: TButton;
     btnAdd: TButton;
+    FrmCommandList: TFrameCommandList;
     lblUserDefinedBinds: TLabel;
     lblCommands: TLabel;
-    ListBox1: TListBox;
-    ListBoxCommands: TListBox;
-    procedure actScanKeyExecute(Sender: TObject);
-  private
-    procedure FillListBoxWithCommands(AListBox: TListBox);
+    ListBoxNewBinds: TListBox;
+    procedure actAddExecute(Sender: TObject);
+    procedure actSelectKeyExecute(Sender: TObject);
   public
     constructor Create(TheOwner: TComponent); override;
-    procedure DataToFrame(ACfgFileKeyList: TCfgFileKeyList);
-    procedure FrameToData(ACfgFileKeyList: TCfgFileKeyList);
   end;
 
 implementation
@@ -37,40 +36,26 @@ implementation
 
 { TFrameBindKey }
 
-procedure TFrameBindKey.actScanKeyExecute(Sender: TObject);
-var
-  ch : char;
+procedure TFrameBindKey.actSelectKeyExecute(Sender: TObject);
+//var
+  //ch : char;
 begin
   //ch := ReadKey;
 end;
 
-procedure TFrameBindKey.FillListBoxWithCommands(AListBox: TListBox);
+procedure TFrameBindKey.actAddExecute(Sender: TObject);
 var
-  CfgCommand: TCfgCommand;
+  lSelectedCfgCommand: string;
 begin
-  for CfgCommand in CfgCommands do
-    AListBox.Items.AddObject(CfgCommand.Name, CfgCommand);
+  lSelectedCfgCommand := FrmCommandList.SelectedCfgCommand;
+  if lSelectedCfgCommand <> '' then
+    ListBoxNewBinds.Items.Add(lSelectedCfgCommand);
 end;
 
 constructor TFrameBindKey.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
   //
-end;
-
-procedure TFrameBindKey.DataToFrame(ACfgFileKeyList: TCfgFileKeyList);
-begin
-  if ACfgFileKeyList = nil then
-    Exit;
-
-  FillListBoxWithCommands(ListBoxCommands);
-end;
-
-procedure TFrameBindKey.FrameToData(ACfgFileKeyList: TCfgFileKeyList);
-begin
-  if ACfgFileKeyList = nil then
-    Exit;
-
 end;
 
 end.

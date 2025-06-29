@@ -20,6 +20,8 @@ unit uCfgWriter;
 
 interface
 
+{$INCLUDE global_directives.inc}
+
 uses
   Classes, SysUtils;
 

@@ -4,9 +4,12 @@ unit uNewCfgWizardForm;
 
 interface
 
+{$INCLUDE global_directives.inc}
+
 uses
+  uCfgWriter, uViewmodelFrame, uBindKeyFrame,
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  ActnList, uViewmodelFrame, uBindKeyFrame, uCfgWriter;
+  ActnList;
 
 type
 
@@ -20,7 +23,6 @@ type
     btnOk: TButton;
     FrmBindKey: TFrameBindKey;
     FrmViewmodel: TFrameViewmodel;
-    PanelHeader: TPanel;
     PanelBottom: TPanel;
     PanelViewmodel: TPanel;
     procedure actCloseExecute(Sender: TObject);
@@ -53,7 +55,7 @@ end;
 procedure TFormNewCfgWizard.FormShow(Sender: TObject);
 begin
   FrmViewmodel.DataToFrame(CfgFileKeyList);
-  FrmBindKey.DataToFrame(CfgFileKeyList);
+  FrmBindKey.FrmCommandList.ListBoxCommands.ItemIndex := 0;
 end;
 
 class function TFormNewCfgWizard.Execute(ACfgFileKeyList: TCfgFileKeyList): boolean;

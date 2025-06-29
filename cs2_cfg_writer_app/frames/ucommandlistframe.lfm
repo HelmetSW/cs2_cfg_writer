@@ -1,29 +1,20 @@
 object FrameCommandList: TFrameCommandList
   Left = 0
-  Height = 375
+  Height = 270
   Top = 0
-  Width = 422
-  ClientHeight = 375
-  ClientWidth = 422
+  Width = 356
+  ClientHeight = 270
+  ClientWidth = 356
   TabOrder = 0
-  DesignLeft = 844
-  DesignTop = 328
+  DesignLeft = 737
+  DesignTop = 376
   object ListBoxCommands: TListBox
     Left = 0
-    Height = 333
+    Height = 270
     Top = 0
-    Width = 422
+    Width = 356
     Align = alClient
     ItemHeight = 0
     TabOrder = 0
-  end
-  object PanelBottom: TPanel
-    Left = 0
-    Height = 42
-    Top = 333
-    Width = 422
-    Align = alBottom
-    BevelOuter = bvNone
-    TabOrder = 1
   end
 end

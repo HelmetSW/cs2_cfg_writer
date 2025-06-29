@@ -4,6 +4,8 @@
 
 interface
 
+{$INCLUDE global_directives.inc}
+
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, StdCtrls,
   ExtCtrls, ActnList;
