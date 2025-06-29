@@ -1,0 +1,91 @@
+object FormNewCfgWizard: TFormNewCfgWizard
+  Left = 747
+  Height = 441
+  Top = 342
+  Width = 515
+  Caption = 'Průvodce vytvoření konfiguračního souboru'
+  ClientHeight = 441
+  ClientWidth = 515
+  OnShow = FormShow
+  LCLVersion = '2.2.6.0'
+  object PanelViewmodel: TPanel
+    Left = 0
+    Height = 192
+    Top = 210
+    Width = 515
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 192
+    ClientWidth = 515
+    TabOrder = 0
+    inline FrmViewmodel: TFrameViewmodel
+      Height = 192
+      Width = 515
+      Align = alClient
+      ClientHeight = 192
+      ClientWidth = 515
+    end
+  end
+  object PanelBottom: TPanel
+    Left = 0
+    Height = 39
+    Top = 402
+    Width = 515
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 39
+    ClientWidth = 515
+    TabOrder = 1
+    object btnClose: TButton
+      Left = 427
+      Height = 25
+      Top = 8
+      Width = 75
+      Action = actClose
+      Anchors = [akTop, akRight]
+      TabOrder = 0
+    end
+    object btnOk: TButton
+      Left = 328
+      Height = 25
+      Top = 8
+      Width = 75
+      Action = actOk
+      Anchors = [akTop, akRight]
+      TabOrder = 1
+    end
+  end
+  object PanelHeader: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 515
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 2
+  end
+  inline FrmBindKey: TFrameBindKey
+    Height = 160
+    Top = 50
+    Width = 515
+    Align = alClient
+    ClientHeight = 160
+    ClientWidth = 515
+    TabOrder = 3
+    inherited ListBoxCommands: TListBox
+      Height = 159
+    end
+  end
+  object ActsList: TActionList
+    Left = 456
+    Top = 200
+    object actClose: TAction
+      Caption = 'Zavřít'
+      OnExecute = actCloseExecute
+    end
+    object actOk: TAction
+      Caption = 'Ok'
+      OnExecute = actOkExecute
+    end
+  end
+end

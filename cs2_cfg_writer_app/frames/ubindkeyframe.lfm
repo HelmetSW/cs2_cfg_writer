@@ -1,0 +1,72 @@
+object FrameBindKey: TFrameBindKey
+  Left = 0
+  Height = 313
+  Top = 0
+  Width = 613
+  ClientHeight = 313
+  ClientWidth = 613
+  TabOrder = 0
+  DesignLeft = 691
+  DesignTop = 378
+  object ListBoxCommands: TListBox
+    Left = 8
+    Height = 273
+    Top = 32
+    Width = 248
+    Anchors = [akTop, akLeft, akBottom]
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object BtnScanKey: TButton
+    Left = 272
+    Height = 25
+    Top = 80
+    Width = 102
+    Action = actScanKey
+    TabOrder = 1
+  end
+  object lblCommands: TLabel
+    Left = 11
+    Height = 15
+    Top = 8
+    Width = 40
+    Caption = 'Příkazy:'
+    ParentColor = False
+  end
+  object ListBox1: TListBox
+    Left = 392
+    Height = 273
+    Top = 32
+    Width = 216
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ItemHeight = 0
+    TabOrder = 2
+  end
+  object btnAdd: TButton
+    Left = 272
+    Height = 25
+    Top = 40
+    Width = 102
+    Action = actAdd
+    TabOrder = 3
+  end
+  object lblUserDefinedBinds: TLabel
+    Left = 400
+    Height = 15
+    Top = 9
+    Width = 89
+    Caption = 'Vytvořené bindy:'
+    ParentColor = False
+  end
+  object ActsList: TActionList
+    Left = 568
+    Top = 8
+    object actScanKey: TAction
+      Caption = 'Sejmout klávesu'
+      OnExecute = actScanKeyExecute
+    end
+    object actAdd: TAction
+      Caption = 'Přidat'
+    end
+  end
+end

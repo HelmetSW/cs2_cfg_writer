@@ -1,0 +1,140 @@
+object FrameViewmodel: TFrameViewmodel
+  Left = 0
+  Height = 172
+  Top = 0
+  Width = 501
+  ClientHeight = 172
+  ClientWidth = 501
+  TabOrder = 0
+  DesignLeft = 778
+  DesignTop = 426
+  object edtFOV: TSpinEdit
+    Left = 48
+    Height = 23
+    Top = 8
+    Width = 56
+    MaxValue = 68
+    MinValue = 54
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    Value = 54
+  end
+  object lblFOV: TLabel
+    Left = 16
+    Height = 15
+    Top = 12
+    Width = 25
+    Caption = 'FOV:'
+    ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object gbViewModel: TGroupBox
+    Left = 128
+    Height = 160
+    Top = 8
+    Width = 368
+    Caption = 'Viewmodel:'
+    ClientHeight = 140
+    ClientWidth = 364
+    TabOrder = 1
+    object lblViewmodelX: TLabel
+      Left = 16
+      Height = 15
+      Top = 9
+      Width = 31
+      Caption = 'osa X:'
+      ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object lblViewmodelY: TLabel
+      Left = 16
+      Height = 15
+      Top = 44
+      Width = 31
+      Caption = 'osa Y:'
+      ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object lblViewmodelZ: TLabel
+      Left = 16
+      Height = 15
+      Top = 76
+      Width = 31
+      Caption = 'osa Z:'
+      ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object edtViewmodelX: TFloatSpinEdit
+      Left = 64
+      Height = 23
+      Top = 5
+      Width = 96
+      DecimalPlaces = 1
+      Increment = 0.5
+      MaxValue = 2.5
+      MinValue = -2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      Value = 2.5
+    end
+    object edtViewmodelY: TFloatSpinEdit
+      Left = 64
+      Height = 23
+      Top = 40
+      Width = 96
+      DecimalPlaces = 1
+      Increment = 0.5
+      MaxValue = 2
+      MinValue = -2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Value = -2
+    end
+    object edtViewmodelZ: TFloatSpinEdit
+      Left = 64
+      Height = 23
+      Top = 72
+      Width = 96
+      DecimalPlaces = 1
+      Increment = 0.5
+      MaxValue = 2
+      MinValue = -2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      Value = -2
+    end
+    object lblViewmodelPresetpos: TLabel
+      Left = 16
+      Height = 15
+      Top = 107
+      Width = 117
+      Caption = 'Přednastavené pozice:'
+      ParentColor = False
+    end
+    object cbViewmodelPresetpos: TComboBox
+      Left = 144
+      Height = 23
+      Top = 104
+      Width = 208
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'Desktop'
+        'Couch'
+        'Classic'
+      )
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+      Text = 'Desktop'
+    end
+  end
+end
